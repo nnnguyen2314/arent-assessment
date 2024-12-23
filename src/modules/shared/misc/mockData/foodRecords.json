@@ -1,0 +1,50 @@
+[
+  {
+    "id": "food-record-1",
+    "type": "Morning",
+    "imageUrl": "/assets/images/dashboard/m01.jpg",
+    "time": "05.21"
+  },
+  {
+    "id": "food-record-2",
+    "type": "Lunch",
+    "imageUrl": "/assets/images/dashboard/l01.jpg",
+    "time": "12.00"
+  },
+  {
+    "id": "food-record-3",
+    "type": "Dinner",
+    "imageUrl": "/assets/images/dashboard/d01.jpg",
+    "time": "18.30"
+  },
+  {
+    "id": "food-record-4",
+    "type": "Snack",
+    "imageUrl": "/assets/images/dashboard/l01.jpg",
+    "time": "15.10"
+  },
+  {
+    "id": "food-record-5",
+    "type": "Morning",
+    "imageUrl": "/assets/images/dashboard/m02.jpg",
+    "time": "05.21"
+  },
+  {
+    "id": "food-record-6",
+    "type": "Lunch",
+    "imageUrl": "/assets/images/dashboard/l02.jpg",
+    "time": "12.00"
+  },
+  {
+    "id": "food-record-7",
+    "type": "Dinner",
+    "imageUrl": "/assets/images/dashboard/d02.jpg",
+    "time": "15.10"
+  },
+  {
+    "id": "food-record-8",
+    "type": "Snack",
+    "imageUrl": "/assets/images/dashboard/s01.jpg",
+    "time": "18.30"
+  }
+]
