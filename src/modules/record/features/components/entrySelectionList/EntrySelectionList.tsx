@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from "styled-components";
-import RecommendedListItem from "@modules/column/features/components/recommendedList/RecommendedListItem";
 import {Col, Row} from "antd";
+import EntryListItem from "@modules/record/features/components/entrySelectionList/EntryListItem";
 
-const StyledRecommendedList = styled(Row)`
+const StyledEntrySelectionList = styled(Row)`
   
 `;
 
-interface RecommendedListProps {
-    recommendedList: any[];
+interface EntrySelectionListProps {
+    entrySelectionList: any[];
 }
 
-const EntrySelectionList = (props: RecommendedListProps) => {
+const EntrySelectionList = (props: EntrySelectionListProps) => {
     return (
-        <StyledRecommendedList gutter={24}>
-            {
-                props.recommendedList && props.recommendedList.map((item, index) => {
-                    return (
-                        <Col md={6} sm={12} xs={24}>
-                            <RecommendedListItem title={item?.title} description={item?.description}/>
-                        </Col>
-                    )
-                })
-            }
-        </StyledRecommendedList>
+        <StyledEntrySelectionList gutter={24}>
+            <Col md={8} sm={12} xs={24}>
+                <EntryListItem title="Body Record" description="自分のカラダの記録" className="body-record"/>
+            </Col>
+            <Col md={8} sm={12} xs={24}>
+                <EntryListItem title="My Excercise" description="自分の運動の記録" className="my-excercise"/>
+            </Col>
+            <Col md={8} sm={12} xs={24}>
+                <EntryListItem title="My Diary" description="自分の日記" className="my-diary"/>
+            </Col>
+        </StyledEntrySelectionList>
     )
 };
 

@@ -4,56 +4,58 @@ import styled from "styled-components";
 
 const { Title } = Typography;
 
-const StyledRecommendedItemCard = styled(Card)`
-  text-align: center;
-  background-color: #2E2E2E;
+const StyledEntryListItemWrapper = styled.div`
+  //background-color: #FFCC21;
   border-radius: unset;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  width: 216px;
-  height: 100%;
-  
-  .ant-card-head {
-    border-bottom: none;
-    color: #FFCC21;
-    padding: 0 8px;
+  //padding: 15px;
+  width: 288px;
+  height: 288px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px #FFCC21 solid;
 
-    .ant-card-head-title {
-      white-space: break-spaces;
-      text-transform: uppercase;
-      font-size: 22px;
-      font-weight: 400;
-    }
+  &.body-record {
+    background: url('/assets/images/records/MyRecommend-1.jpg') no-repeat;
+    background-size: cover;
   }
-  .ant-card-body {
-    color: #ffffff;
-    padding-top: 0;
-    padding-bottom: 0;
-    
-    .ant-divider {
-      background-color: #ffffff;
-      min-width: 50%;
-      width: 50%;
-      align-self: center;
-      justify-self: center;
-      margin: 8px 0;
-    }
+  &.my-excercise {
+    background: url('/assets/images/records/MyRecommend-2.jpg') no-repeat;
+    background-size: cover;
+  }
+  &.my-diary {
+    background: url('/assets/images/records/MyRecommend-3.jpg') no-repeat;
+    background-size: cover;
+  }
+  
+  .entry-list-item-content {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    opacity: 0.6;
   }
 `;
 
-interface RecommendedItemProps {
+interface EntryListItemProps {
     title: string;
     description: string;
+    className: string;
 }
 
-const EntryListItem = (props: RecommendedItemProps) => {
+const EntryListItem = (props: EntryListItemProps) => {
     return (
-        <StyledRecommendedItemCard>
+        <StyledEntryListItemWrapper className={props.className}>
             <Space direction="vertical">
                 <Title>{props.title}</Title>
                 <div>{props.description}</div>
             </Space>
-        </StyledRecommendedItemCard>
+            <div className="entry-list-item-content"></div>
+        </StyledEntryListItemWrapper>
     )
 };
 

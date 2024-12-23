@@ -7,6 +7,7 @@ import {Button, Space} from "antd";
 import MyDiaryList from "@modules/record/features/components/myDiaryList/MyDiaryList";
 import bodyWeightFatData from "@modules/shared/misc/mockData/bodyWeightFatData.json";
 import BodyWeightFatGraph from "@modules/record/features/components/personalRecordGraphs/BodyWeightFatGraph";
+import EntrySelectionList from "@modules/record/features/components/entrySelectionList/EntrySelectionList";
 
 const StyledRecordContainer = styled(Space)`
   padding: 50px 157px;
@@ -28,7 +29,7 @@ const StyledRecordContainer = styled(Space)`
 const RecordContainer = () => {
     return (
         <StyledRecordContainer direction="vertical" size="large">
-            <RecommendedList recommendedList={recommendedListData} />
+            <EntrySelectionList entrySelectionList={recommendedListData} />
             <BodyWeightFatGraph data={bodyWeightFatData} />
             <MyDiaryList myDiaryList={myDiariesData} />
             <div className="more-columns-wrapper">
